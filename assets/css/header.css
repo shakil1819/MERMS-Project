@@ -1,0 +1,239 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.menu {
+    background-color: #ffffff;
+}
+
+.main-menu-wrap {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.logo {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 5px 0;
+}
+
+.logo img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.main-menu {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav.main-menu ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+nav.main-menu ul li {
+    margin: 0;
+    padding: 10px 20px;
+    display: inline-block;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+nav.main-menu ul li a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
+nav.main-menu ul li.active>a {
+    color: #2e7f31;
+    text-decoration: none;
+}
+
+nav.main-menu li:hover>a {
+    color: #555;
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu>li>a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+nav.main-menu ul ul.sub-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    left: 10px;
+    top: 70px;
+    border-radius: 3px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav.main-menu ul ul.sub-menu li {
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    text-align: left;
+    display: none;
+}
+
+nav.main-menu ul ul.sub-menu li a {
+    color: #555;
+    font-weight: 600;
+    padding: 7px 10px;
+    font-size: 13px;
+}
+
+.action {
+    float: right;
+    width: 150px;
+    padding: 15px 0;
+}
+
+.action .profile {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.action .profile div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60px;
+    float: left;
+}
+
+.action .profile img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.action .menu {
+    font-size: 12px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    padding: 10px 20px;
+    background: #fff;
+    width: 140px;
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.action .menu.active {
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .menu::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+#profile-name h3 {
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+    padding: 5px 0;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.5em;
+}
+
+.action .menu h3 span {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.action .menu ul {
+    padding: 0;
+    align-items: center;
+}
+
+.action .menu ul li {
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.action .menu ul li img {
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.action .menu ul li:hover img {
+    opacity: 1;
+}
+
+.action .menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.action .menu ul li:hover a {
+    color: #60bb2c;
+}

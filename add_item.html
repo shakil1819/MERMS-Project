@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCERMS/Inventory</title>
+    <link rel="stylesheet" href="./assets/css/add.css">
+
+</head>
+
+<body style="background-image: url(./assets/images/mil2.png); background-size: cover;">
+
+    <?php
+	include "database.php";
+?>
+
+    <div class="form">
+
+        <div class="poster">
+            <h3>Add an ITEM Here</h3>
+        </div>
+
+
+        <form method="post">
+            ID:<br>
+            <input type="text" name="ID">
+            <br>
+            <br>
+            Name:<br>
+            <input type="text" name="Name">
+            <br>
+            <br>
+            Model:<br>
+            <input type="text" name="Model">
+            <br>
+            <br>
+            Store:<br>
+            <input type="text" name="Store">
+            <br>
+            <br>
+            Quantity:<br>
+            <input type="text" name="Quantity">
+            <br><br>
+
+            <input type="submit" name="save" value="Submit">
+        </form>
+    </div>
+    <?php
+		if(isset($_POST['save']))
+		{	 
+		$ID = $_POST['ID'];
+		$Name = $_POST['Name'];
+		$Model= $_POST['Model'];
+		$Store = $_POST['Store'];
+		$Quantity = $_POST['Quantity'];
+		$query = oci_parse($conn, "INSERT INTO item values ('$ID','$Name','$Model','$Store', '$Quantity')");
+		$result = oci_execute($query);
+		if ($result) {
+					echo "Data added Successfully !";
+					exit();
+		}
+		else{
+			echo "Error !";
+					exit();
+		}
+		}
+
+	?>
+
+
+
+</body>
+
+</html>
