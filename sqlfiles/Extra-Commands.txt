@@ -1,0 +1,10 @@
+
+Creating A SEQUENCE
+
+    create sequence order_id minvalue 1 start with 1 cache 10;
+    create sequence demand_id minvalue 1 start with 1 cache 10;
+    create sequence issue_status_id minvalue 1 start with 1 cache 10;
+    create sequence return_id minvalue 1 start with 1 cache 10;
+
+
+select unit.unit_name, item.Item_name, item_for_demand.Quantity, demand_order.Order_Priority from unit join demand_order using(unit_id) join item_for_demand using(demand_id) join item using(item_id)

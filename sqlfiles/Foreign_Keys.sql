@@ -1,0 +1,16 @@
+alter table TECHNICIAN add constraint TECHNICIAN_shop_id_fk FOREIGN KEY(shop_id) references SHOP(shop_id);
+alter table RETURN add constraint RETURN_order_id_fk FOREIGN KEY(order_id) references REPAIR_ORDER(order_id) on delete cascade;
+alter table REPAIR_ORDER add constraint REPAIR_ORDER_equipment_id_fk FOREIGN KEY(equipment_id) references EQUIPMENT(equipment_id) on delete cascade;
+alter table DEMAND_ORDER add constraint DEMAND_ORDER_unit_id_fk FOREIGN KEY(unit_id) references UNIT(unit_id) on delete cascade;
+alter table DEMAND_ORDER add constraint DEMAND_ORDER_shop_id_fk FOREIGN KEY(shop_id) references SHOP(shop_id) on delete cascade;
+alter table ITEM add constraint ITEM_model_id_fk FOREIGN KEY(model_id) references MODEL(model_id) on delete cascade;
+alter table ITEM add constraint ITEM_store_id_fk FOREIGN KEY(store_id) references STORE(store_id) on delete cascade;
+alter table ISSUE_STATUS add constraint ISSUE_STATUS_demand_id_fk FOREIGN KEY (demand_id) references DEMAND_ORDER(demand_id) on delete cascade;
+alter table REPAIR_STATUS add constraint REPAIR_STATUS_order_id_fk FOREIGN KEY(repair_order_id) references REPAIR_ORDER(order_id) on delete cascade;
+alter table REPAIR_STATUS add constraint REPAIR_STATUS_shop_id_fk FOREIGN KEY(shop_id) references SHOP(shop_id) on delete cascade;
+alter table ITEM_FOR_DEMAND add constraint ITEM_FOR_DEMAND_item_id_fk FOREIGN KEY(item_id) references ITEM(item_id) on delete cascade;
+alter table ITEM_FOR_DEMAND add constraint ITEM_FOR_DEMAND_demand_id_fk FOREIGN KEY(demand_id) references DEMAND_ORDER(demand_id) on delete cascade;
+alter table UNIT add constraint unit_user_id_fk FOREIGN KEY(user_id) references USERS(user_id) on delete cascade;
+alter table SHOP add constraint shop_user_id_fk FOREIGN KEY(user_id) references USERS(user_id) on delete cascade;
+alter table STORE add constraint store_user_id_fk FOREIGN KEY(user_id) references USERS(user_id) on delete cascade;
+alter table ADMIN add constraint admin_user_id_fk FOREIGN KEY(user_id) references USERS(user_id) on delete cascade;

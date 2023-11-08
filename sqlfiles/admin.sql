@@ -1,0 +1,1 @@
+insert  into ADMIN values ('Admin', 'Lionel Messi', 'Lt Col', 'Admin');
