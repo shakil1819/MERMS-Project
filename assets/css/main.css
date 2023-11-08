@@ -1,0 +1,97 @@
+.hero-text {
+    display: table;
+    height: 100%;
+}
+  
+.hero-text-tablecell {
+    display: table-cell;
+}
+  
+.hero-area {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+  
+html, body {
+    height: 100%;
+}
+  
+.hero-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+  
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    padding: 20px;
+}
+  
+.hero-text span {
+    color: #18553a;
+}
+  
+.hero-area div {
+    height: 100%;
+}
+  
+.hero-area div.hero-text {
+    height: 100%;
+    width: 100%;
+}
+  
+.hero-area div.hero-text-tablecell {
+    height: auto;
+    vertical-align: middle;
+}
+  
+.hero-area div.hero-text-tablecell div {
+    height: auto;
+    vertical-align: middle;
+}
+
+.main-section{
+    position: relative;
+    margin: 80px 10px;
+}
+
+.drop-box-area{
+    z-index: 1;
+}
+
+.drop-box-area .text{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.drop-box-area .text h1{
+    padding: 20px 30px;
+    font-size: 18px;
+    color: #18553a;
+}
+
+.table-area{
+    z-index: 1;
+}
+
+.table-area .text{
+    background-color: #fff;
+    padding: 50px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.table-area .text h1{
+    padding: 20px 30px;
+    font-size: 20px;
+    color: #18553a;
+}
